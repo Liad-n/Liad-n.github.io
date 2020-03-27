@@ -12,6 +12,10 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+  var gitHubDbRef = firebase.database().ref('subscription-entries');
+  gitHubDbRef.on('value', function(snapshot) {
+  console.log(postElement, snapshot.val());
+});
 
 function saveToFirebase(email) {
     var emailObject = {
