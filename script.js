@@ -30,6 +30,7 @@ function saveToFirebase(email) {
             error(); // some error method
         });
 }
+
 function success(){
     console.log('success');
 }
