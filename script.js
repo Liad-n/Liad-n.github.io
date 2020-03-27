@@ -11,14 +11,12 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-  console.log('hi')
   firebase.analytics();
 
 function saveToFirebase(email) {
     var emailObject = {
         email: email
     };
-
     firebase.database().ref('subscription-entries').push().set(emailObject)
         .then(function(snapshot) {
             success(); // some success method
