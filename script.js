@@ -14,7 +14,7 @@
   firebase.analytics();
   var gitHubDbRef = firebase.database().ref('subscription-entries');
   gitHubDbRef.on('value', function(snapshot) {
-  console.log(postElement, snapshot.val());
+  console.log(snapshot.val());
 });
 
 function saveToFirebase(email) {
